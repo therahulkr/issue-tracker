@@ -1,0 +1,64 @@
+
+    <div class="profile_info">
+        <!-- <div class="front-page"> -->
+            
+            <h1 class="heading" >
+                Add an Issue for : <sapn style="text-transform: uppercase;"><%=project.name%></sapn>
+            </h1>
+            
+            <!-- <div class="form-container"> -->
+                    <form id="loginform" action="/issue/create/<%=project._id%>" method="post">
+                        <input type="text" name = 'title' placeholder="title" required>
+                        <textarea name='description' placeholder="Description" required></textarea>
+                        <div style="text-align: left;"><b>Label : </b></div>
+                        <select name="label" id="selectOne">
+                                <option value="enhancement">enhancement</option>
+                                <option value="bug">bug</option>
+                                <option value="duplicate">duplicate</option>
+                                <option value="invalid">invalid</option>
+                        </select>
+                        <input type="text" name='author' placeholder="Author's name" required>
+                        <!-- <div>Not a Member? <a href="/users/register">Register</a></div> -->
+                        <input type="submit" value="Add" id='login-btn'>
+                    </form>
+                    <!-- <button style="background-color: #d93025; padding:20px; border:0px; border-radius: 10px;">
+                        <a style="color:white; text-decoration: none; font-size: 20px;"href="/users/auth/google">Sign-In/Sign-Up Using Google</a>
+                    </button> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        
+        <h1 >
+             Issue's List(<%=issuearr.length%>)
+        </h1>
+        <form action="/issue/allissues/<%=project._id%>">
+            <!-- <label for="gsearch">Search Google:</label> -->
+            <input style="outline: none;" type="search" id="gsearch" name="keyword" placeholder="Search and issue">
+            <input type="submit">
+          </form>
+        <div id="issuedisplay">
+            <aside>
+                <h5>Label : </h5>
+                <form action="/issue/filter/<%=project._id%>">
+                    <input type="checkbox" id="label1" name="label" value="enhancement">
+                    <label for="label1">enhancement</label><br>
+                    <input type="checkbox" id="label2" name="label" value="bug">
+                    <label for="label2">bug</label><br>
+                    <input type="checkbox" id="label3" name="label" value="duplicate">
+                    <label for="label3"> duplicate</label><br>
+                    <input type="checkbox" id="label4" name="label" value="invalid">
+                    <label for="label4">invalid</label><br>
+                    <input type="submit" style="background-color:rgb(247, 150, 133);outline:none;border:none;padding: 0.2rem 0.5rem;" value="Apply">
+                </form>
+            </aside>
+            <ul class="list-group" style="margin-bottom: 4rem;">
+                <%for(issue of issuearr){%>
+                    <li class="list-group-item">
+                      <div class="issuename"><b><a id="projectName" href="/project/<%=project._id%>">by:<%=issue.author%></a></b><span><%=issue.label%></span></div>
+                      <div><%=issue.title%></div>
+                      <div>=> <%=issue.description%></div>
+                    </li>
+                <%}%>
+              </ul>
+        </div>
+        
+    </div>

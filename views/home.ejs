@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+
+  <body>
+    <div class="front-page">
+      <h1 class="heading"><a href="/project/new">+</a></h1>
+
+      <ul class="list-group">
+        <%for(project of allprojects){%>
+            <li class="list-group-item">
+              <div class="issuename"><b style="color: tomato;"><a id="projectName" href="/project/<%=project._id%>"><%=project.name%></a></b><span style="background-color: tomato;"><a style="text-decoration: none;color: black;"href="/project/delete/<%=project._id%>"  >X</a></span></div>
+              <p style="font-size: 0.9rem;color: gray;"><%=project.description%></p>
+              <div>by : <%=project.author%></div>
+            </li>
+        <%}%>
+      </ul>
+     </div>
+  </body>
+<!-- JavaScript Bundle with Popper -->
+</html>

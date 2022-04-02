@@ -1,0 +1,95 @@
+.front-page{
+    width: 80%;
+    margin: auto;
+}
+
+.heading{
+    text-align: center;
+}
+.heading a{
+    text-decoration: none;
+    color: black;
+}
+
+#projectName{
+    text-decoration: none;
+    /* color: tomato; */
+}
+
+.list-group {
+    text-transform:uppercase;
+    margin-bottom: 40px;
+}
+.list-group li{
+    padding: 1rem;
+}
+.front-page .heading{
+    cursor: pointer;
+    font-size: 5rem;
+}
+
+.form-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.form-container form{
+    width: 50%;
+    border: 1px solid black;
+    padding: 3rem 2rem;
+}
+
+#loginform{
+    text-align: center;
+}
+
+#loginform input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem;
+}
+#loginform input[type='submit']{
+    background-color: tomato;
+    border: none;
+    outline: none;
+}
+#loginform textarea{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem;
+}
+
+.profile_info{
+    width: 80%;
+    margin : auto;
+    padding-top: 2rem;
+}
+
+#selectOne{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.2rem;
+}
+
+
+
+.issuename{
+    display: flex;
+    justify-content: space-between;
+}
+.issuename span{
+    text-transform: lowercase;
+    /* border: 1px solid black; */
+    padding: 2px 1rem;
+    border-radius: 1rem;
+    background-color: rgb(142, 255, 108);
+}
+
+.issuedisplay{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}

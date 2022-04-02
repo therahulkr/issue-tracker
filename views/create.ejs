@@ -1,0 +1,18 @@
+<div class="front-page">
+    <h1 class="heading" >
+        Create New Project
+    </h1>
+    
+    <div class="form-container">
+            <form id="loginform" action="/project/create" method="post">
+                <input type="text" name = 'name' placeholder="Name of project" required>
+                <textarea name='description' placeholder="Description" required></textarea>
+                <input type="text" name='author' placeholder="Author's name" required>
+                <!-- <div>Not a Member? <a href="/users/register">Register</a></div> -->
+                <input type="submit" value="Create" id='login-btn'>
+            </form>
+            <!-- <button style="background-color: #d93025; padding:20px; border:0px; border-radius: 10px;">
+                <a style="color:white; text-decoration: none; font-size: 20px;"href="/users/auth/google">Sign-In/Sign-Up Using Google</a>
+            </button> -->
+    </div>
+</div>
