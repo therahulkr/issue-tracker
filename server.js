@@ -13,7 +13,7 @@ process.on('uncaughtException',(err)=>{
 })
 
 const server = app.listen(port,()=>{
-    console.log('server is loaded on Port : ',`http://localhost:${port}`);
+    console.log('server is loaded on Port : ',port);
 })
 
 // Unhandled Promise Rejection
